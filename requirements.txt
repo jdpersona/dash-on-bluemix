@@ -9,3 +9,6 @@ dash-core-components
 dash-html-components
 plotly
 gunicorn
+
+pandas==0.19.2
+pandas-datareader==0.3.0.post0
