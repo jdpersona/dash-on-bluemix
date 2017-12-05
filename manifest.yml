@@ -1,5 +1,5 @@
 ---
 applications:
- - name: GetStartedPython
+ - name: HelloDash
    random-route: true
    memory: 128M
