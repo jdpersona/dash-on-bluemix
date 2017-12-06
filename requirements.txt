@@ -2,9 +2,9 @@ Flask==0.12.2
 cf-deployment-tracker==1.0.4
 cloudant==2.4.0
 
-dash==0.18.3
-dash-auth==0.0.10
-dash-renderer==0.11.0
+dash
+dash-auth
+dash-renderer
 dash-core-components
 dash-html-components
 plotly
