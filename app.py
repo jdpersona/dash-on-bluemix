@@ -10,6 +10,8 @@ from dash.dependencies import Input, Output, State
 import dash_core_components as dcc
 import dash_html_components as html
 
+import urllib.request
+
 # Multi-dropdown options
 from controls import COUNTIES, WELL_STATUSES, WELL_TYPES, WELL_COLORS
 
@@ -31,7 +33,7 @@ well_type_options = [{'label': str(WELL_TYPES[well_type]),
                      for well_type in WELL_TYPES]
 
 # Load data
-df = pd.read_csv('data/wellspublic.csv')
+df = pd.read_csv('https://github.com/charleyferrari/sharedfiles/raw/master/wellspublic.csv')
 df['Date_Well_Completed'] = pd.to_datetime(df['Date_Well_Completed'])
 df = df[df['Date_Well_Completed'] > dt.datetime(1960, 1, 1)]
 
@@ -39,7 +41,10 @@ trim = df[['API_WellNo', 'Well_Type', 'Well_Name']]
 trim.index = trim['API_WellNo']
 dataset = trim.to_dict(orient='index')
 
-points = pickle.load(open("data/points.pkl", "rb"))
+target_url = "https://github.com/charleyferrari/sharedfiles/raw/master/points.pkl"
+points = pickle.load(urllib.request.urlopen(target_url))
+
+# points = pickle.load(open("https://github.com/charleyferrari/dash-on-bluemix/raw/hello-dash-oilandgas/data/points.pkl", "rb"))
 
 # Create global chart template
 mapbox_access_token = 'pk.eyJ1IjoiamFja2x1byIsImEiOiJjajNlcnh3MzEwMHZtMzNueGw3NWw5ZXF5In0.fk8k06T96Ml9CLGgKmk81w'  # noqa: E501
