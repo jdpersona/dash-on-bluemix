@@ -1,5 +1,5 @@
 ---
 applications:
- - name: HelloDash
+ - name: HelloDashOilandGas
    random-route: true
    memory: 128M
