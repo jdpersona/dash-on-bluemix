@@ -4,16 +4,8 @@ import dash
 from dash.dependencies import Input, Output
 import dash_core_components as dcc
 import dash_html_components as html
-from pandas_datareader import data as web
-from datetime import datetime as dt
-import pandas_datareader 
-import plotly 
-import seaborn as sns
-import plotly.plotly as py
 import plotly.graph_objs as go
-import matplotlib.pyplot as plt
-import seaborn as sns
-from scipy.stats import chi2_contingency
+
 
 daily_df = pd.read_csv("https://raw.githubusercontent.com/jdpersona/Dash_Apps/master/daily_df.csv")
 app = dash.Dash()
