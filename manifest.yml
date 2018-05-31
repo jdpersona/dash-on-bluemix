@@ -1,5 +1,5 @@
 ---
 applications:
- - name: HelloDashOilandGas
+ - name: NPS_APP
    random-route: true
    memory: 512M
