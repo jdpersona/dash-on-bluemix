@@ -1,14 +1,16 @@
 import pandas as pd
 import numpy as np
 import dash
-from dash.dependencies import Input, Output
+from dash.dependencies import Input, Output, State
 import dash_core_components as dcc
 import dash_html_components as html
 import plotly.graph_objs as go
-
+from flask import Flask
 
 daily_df = pd.read_csv("https://raw.githubusercontent.com/jdpersona/Dash_Apps/master/daily_df.csv")
-app = dash.Dash()
+
+app = dash.Dash(__name__)
+server = app.server
 
 app.css.append_css({"external_url": 'https://codepen.io/jdpersona/pen/OZrWLO.css'})
 
@@ -279,6 +281,6 @@ def update_output(items, start_date, end_date):
         'data': data
         }
 
-
 if __name__ == '__main__':
-    app.run_server( )
+    app.run_server(debug=True, threaded=True)
+
