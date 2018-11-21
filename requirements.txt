@@ -14,3 +14,4 @@ pandas==0.19.2
 pandas-datareader==0.3.0.post0
 numpy==1.14.1
 numpydoc==0.8.0
+
