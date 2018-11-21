@@ -1,5 +1,5 @@
 ---
 applications:
- - name: NPS_APP
+ - name: DDF_Monitor
    random-route: true
    memory: 512M
