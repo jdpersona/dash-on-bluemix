@@ -1,7 +1,6 @@
-Flask==0.12.2
+Flask
 cf-deployment-tracker==1.0.4
 cloudant==2.4.0
-
 dash
 dash-auth
 dash-renderer
@@ -9,9 +8,11 @@ dash-core-components
 dash-html-components
 plotly
 gunicorn
-
-pandas==0.19.2
+knackpy
+pandas==0.23.4
 pandas-datareader==0.3.0.post0
 numpy==1.14.1
 numpydoc==0.8.0
+pybase64
+
 
