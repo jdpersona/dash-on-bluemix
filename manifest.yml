@@ -1,5 +1,5 @@
 ---
 applications:
- - name: DDF_Monitor
+ - name: Migrate_data
    random-route: true
    memory: 512M
